@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bellman-Ford Pathfinding Visualization</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+        #grid {
+            display: grid;
+            grid-template-columns: repeat(20, 30px);
+            grid-template-rows: repeat(20, 30px);
+            gap: 2px;
+        }
+        .cell {
+            width: 30px;
+            height: 30px;
+            border: 1px solid #ddd;
+        }
+        .start { background-color: blue; }
+        .target { background-color: red; }
+        .wall { background-color: black; }
+        .path { background-color: green; }
+        .visited { background-color: yellow; }
+    </style>
+</head>
+<body>
+
+    <h1>Bellman-Ford Pathfinding Visualization</h1>
+    <div id="controls">
+        <button id="startBtn">Start Bellman-Ford</button>
+        <button id="resetBtn">Reset Grid</button>
+        <button id="generateMazeBtn">Generate Maze</button>
+        <label for="gridSize">Grid Size:</label>
+        <input type="range" id="gridSize" min="10" max="50" value="20">
+        <span id="gridSizeValue">20x20</span>
+        <label for="delay">Delay (ms):</label>
+        <input type="range" id="delay" min="0" max="100" value="30">
+        <span id="delayValue">30ms</span>
+        <input type="checkbox" id="allowDiagonals"> Allow Diagonal Movement
+    </div>
+    <div id="grid"></div>
+
+    <script src="js/bfs.js"></script>
+</body>
+</html>

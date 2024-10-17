@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bellman-Ford Algorithm</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Bellman-Ford Algorithm</h1>
+    </header>
+
+    <section class="description">
+        <p>
+            The Bellman-Ford algorithm is designed to find the shortest paths from a single source vertex to all other vertices in a weighted graph. It is particularly useful for graphs that contain negative weight edges.
+        </p>
+        <p>
+            Unlike Dijkstra's algorithm, the Bellman-Ford algorithm can handle graphs with negative weights by detecting negative weight cycles. It iterates over all edges up to |V| - 1 times, where |V| is the number of vertices in the graph, ensuring that the shortest path is accurately computed even with negative weights.
+        </p>
+        <p>
+            <strong>Key Features:</strong>
+            <ul>
+                <li>Handles negative weight edges and detects negative weight cycles.</li>
+                <li>Provides a reliable solution for graphs with negative weights.</li>
+                <li>Less efficient compared to Dijkstra's algorithm for graphs with non-negative weights.</li>
+            </ul>
+        </p>
+    </section>
+
+   <section class="visualization">
+    <a href="/bellmanford" class="visualize-btn">Visualize Bellman-Ford</a>
+</section>
+
+    <footer>
+        <p>&copy; 2024 Algorithm Visualizer. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/visualization.js"></script>
+</body>
+</html>
+
